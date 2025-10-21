@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Trash2, Edit2, Check, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { Trash2, Edit2, Check, X } from 'lucide-react';
 import useTodoStore from '@/store/todoStore';
 import { Task } from '@/types/todo';
 
