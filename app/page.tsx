@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { List, Network, LayoutGrid, CalendarDays, Trash2 } from 'lucide-react';
 import useTodoStore from '@/store/todoStore';
 import { ViewMode } from '@/types/todo';
@@ -9,11 +8,12 @@ import ClassicView from '@/components/ClassicView';
 import WorkflowyView from '@/components/WorkflowyView';
 import KanbanView from '@/components/KanbanView';
 import CalendarView from '@/components/CalendarView';
+import type { LucideIcon } from 'lucide-react';
 
 export default function Home() {
   const { viewMode, setViewMode, tasks, clearCompleted } = useTodoStore();
 
-  const views: { mode: ViewMode; icon: any; label: string; description: string }[] = [
+  const views: { mode: ViewMode; icon: LucideIcon; label: string; description: string }[] = [
     {
       mode: 'classic',
       icon: List,
